@@ -20,7 +20,7 @@ export function Upload({ projectId }) {
     const fetchSubprojects = async (projectId) => {
         try {
             console.log(typeof projectId);
-            const response = await axios.get(`http://localhost:3000/projects/${projectId}/subprojects`);
+            const response = await axios.get(`https://backend-vzgu.onrender.com/projects/${projectId}/subprojects`);
             setSubprojects(response.data.data);
             console.log(response.data);
         } catch (error) {
